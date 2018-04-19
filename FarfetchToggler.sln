@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarfetchToggler", "FarfetchToggler\FarfetchToggler.csproj", "{9910082D-C854-4CB8-8691-28DB113E45BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarfetchBusinessEntities", "FarfetchBusinessEntities\FarfetchBusinessEntities.csproj", "{033DAA69-F722-4096-BC50-F04F2D5C5231}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarfetchDataModel", "FarfetchDataModel\FarfetchDataModel.csproj", "{311B0701-C5DC-4D59-AD91-D94F4E3A3421}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarfetchBusinessServices", "BusinessServices\FarfetchBusinessServices.csproj", "{7327C336-7A6F-461E-B082-5EAE1E833700}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarfetchDependencyResolver", "FarfetchDependencyResolver\FarfetchDependencyResolver.csproj", "{C626201C-7300-4434-801B-E68496045FD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9910082D-C854-4CB8-8691-28DB113E45BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9910082D-C854-4CB8-8691-28DB113E45BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9910082D-C854-4CB8-8691-28DB113E45BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9910082D-C854-4CB8-8691-28DB113E45BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{033DAA69-F722-4096-BC50-F04F2D5C5231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{033DAA69-F722-4096-BC50-F04F2D5C5231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{033DAA69-F722-4096-BC50-F04F2D5C5231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{033DAA69-F722-4096-BC50-F04F2D5C5231}.Release|Any CPU.Build.0 = Release|Any CPU
+		{311B0701-C5DC-4D59-AD91-D94F4E3A3421}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{311B0701-C5DC-4D59-AD91-D94F4E3A3421}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{311B0701-C5DC-4D59-AD91-D94F4E3A3421}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{311B0701-C5DC-4D59-AD91-D94F4E3A3421}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7327C336-7A6F-461E-B082-5EAE1E833700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7327C336-7A6F-461E-B082-5EAE1E833700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7327C336-7A6F-461E-B082-5EAE1E833700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7327C336-7A6F-461E-B082-5EAE1E833700}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C626201C-7300-4434-801B-E68496045FD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C626201C-7300-4434-801B-E68496045FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C626201C-7300-4434-801B-E68496045FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C626201C-7300-4434-801B-E68496045FD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
