@@ -22,7 +22,7 @@ Features used
 
 <ul>
 <li>Install SqlServer Express</li>
-<li>Create a database and run the database script (Already contains some data)</li>
+<li>Create a database and run the database script 'WebApiDb.sql' (Already contains some data)</li>
 <li>Open the solution on visual studio and change the connection string according</li>
 <li>Run the solution</li>
 <li>The Api Documentation will be under localhost:someport/help</li>
