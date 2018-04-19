@@ -5,7 +5,7 @@
 Patterns
 <ul>
 <li>Repository pattern</li>
-<li>Unit of work pattern</li><
+<li>Unit of work pattern</li>
 <li>Dependency Injection</li>
 </ul>
 
@@ -13,7 +13,7 @@ Features used
 
 <ul>
 <li>Entity Framework</li>
-<li>Unity</li><
+<li>Unity</li>
 <li>MEF</li>
 <li>NUnit</li>
 <li>Moq</li>
