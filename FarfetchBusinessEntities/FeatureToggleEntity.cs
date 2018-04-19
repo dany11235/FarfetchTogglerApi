@@ -10,6 +10,6 @@ namespace FarfetchBusinessEntities
     {
         public string Name { get; set; }
         public bool Value { get; set; }
-        public List<int> WhiteList { get; set; }
+        public ICollection<ServiceToggleEntity> ServiceFeatureToggle { get; set; }
     }
 }

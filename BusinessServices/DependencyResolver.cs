@@ -17,6 +17,7 @@ namespace BusinessServices
             registerComponent.RegisterType<IUserServices, UserServices>();
             registerComponent.RegisterType<ITokenServices, TokenServices>();
             registerComponent.RegisterType<IFeatureToggleServices, FeatureToggleServices>();
+            
         }
     }
 }

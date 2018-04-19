@@ -10,6 +10,6 @@ namespace FarfetchBusinessEntities
     {
         public int ServiceId { get; set; }
         public string FeatureToggleName { get; set; }
-        public bool CustomValue { get; set; }
+        public Nullable<bool> CustomValue { get; set; }
     }
 }

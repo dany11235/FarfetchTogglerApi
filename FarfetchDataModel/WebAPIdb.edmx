@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="Name" />
           </Key>
-          <Property Name="Name" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Value" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="ServiceFeatureToggle">
@@ -18,7 +18,7 @@
             <PropertyRef Name="FeatureToggleName" />
           </Key>
           <Property Name="ServiceId" Type="int" Nullable="false" />
-          <Property Name="FeatureToggleName" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="FeatureToggleName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="CustomValue" Type="bit" />
         </EntityType>
         <EntityType Name="Services">
@@ -48,7 +48,7 @@
           <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <Association Name="FK__ServiceFe__Featu__3F466844">
+        <Association Name="FK__ServiceFe__Featu__48CFD27E">
           <End Role="FeatureToggle" Type="Self.FeatureToggle" Multiplicity="1" />
           <End Role="ServiceFeatureToggle" Type="Self.ServiceFeatureToggle" Multiplicity="*" />
           <ReferentialConstraint>
@@ -60,7 +60,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ServiceFe__Servi__3E52440B">
+        <Association Name="FK__ServiceFe__Servi__47DBAE45">
           <End Role="Services" Type="Self.Services" Multiplicity="1" />
           <End Role="ServiceFeatureToggle" Type="Self.ServiceFeatureToggle" Multiplicity="*" />
           <ReferentialConstraint>
@@ -90,11 +90,11 @@
           <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tokens" EntityType="Self.Tokens" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__ServiceFe__Featu__3F466844" Association="Self.FK__ServiceFe__Featu__3F466844">
+          <AssociationSet Name="FK__ServiceFe__Featu__48CFD27E" Association="Self.FK__ServiceFe__Featu__48CFD27E">
             <End Role="FeatureToggle" EntitySet="FeatureToggle" />
             <End Role="ServiceFeatureToggle" EntitySet="ServiceFeatureToggle" />
           </AssociationSet>
-          <AssociationSet Name="FK__ServiceFe__Servi__3E52440B" Association="Self.FK__ServiceFe__Servi__3E52440B">
+          <AssociationSet Name="FK__ServiceFe__Servi__47DBAE45" Association="Self.FK__ServiceFe__Servi__47DBAE45">
             <End Role="Services" EntitySet="Services" />
             <End Role="ServiceFeatureToggle" EntitySet="ServiceFeatureToggle" />
           </AssociationSet>
@@ -172,7 +172,7 @@
           <Key>
             <PropertyRef Name="Name" />
           </Key>
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Value" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="ServiceFeatureToggle" Relationship="WebApiDbModel.FK__ServiceFe__Featu__3F466844" FromRole="FeatureToggle" ToRole="ServiceFeatureToggle" />
         </EntityType>
@@ -182,7 +182,7 @@
             <PropertyRef Name="FeatureToggleName" />
           </Key>
           <Property Name="ServiceId" Type="Int32" Nullable="false" />
-          <Property Name="FeatureToggleName" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="FeatureToggleName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CustomValue" Type="Boolean" />
           <NavigationProperty Name="FeatureToggle" Relationship="WebApiDbModel.FK__ServiceFe__Featu__3F466844" FromRole="ServiceFeatureToggle" ToRole="FeatureToggle" />
           <NavigationProperty Name="Services" Relationship="WebApiDbModel.FK__ServiceFe__Servi__3E52440B" FromRole="ServiceFeatureToggle" ToRole="Services" />

@@ -1,4 +1,5 @@
-﻿using FarfetchToggler.App_Start;
+﻿using BusinessServices;
+using FarfetchToggler.App_Start;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,9 @@ namespace FarfetchToggler
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             Bootstrapper.Initialise();
-            
+            AutoMapperConfiguration.Configure();
+
+
         }
     }
 }

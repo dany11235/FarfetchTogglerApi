@@ -10,6 +10,16 @@ namespace FarfetchBusinessServices.ServicesInterfaces
         IEnumerable<FeatureToggleEntity> GetAllFeatureToggles();
         string CreateFeatureToggle(FeatureToggleEntity featureToggleEntity);
         bool UpdateFeatureToggle(string featureToggleName, bool value);
-        bool DeleteFeatureToggle(string featureToggleName);
+        IEnumerable<ServiceToggleEntity> GetFeatureToggleServicesConfigurations(string featureToggleName);
+
+        ServiceToggleEntity GetFeatureToggleServiceConfiguration(string featureToggleName, int serviceId);
+
+        ServiceToggleEntity InsertFeatureToggleServiceConfiguration(string featureToggleName, ServiceToggleEntity serviceToggleEntity);
+
+        bool UpdateFeatureToggleServiceConfiguration(string featureToggleName, int serviceId, ServiceToggleEntity serviceToggleEntity);
+
+        bool DeleteFeatureToggleServiceConfiguration(int serviceId,string featureToggleName);
+
+        IEnumerable<FeatureToggleEntity> GetServiceAvailableToggles(int serviceId, string serviceVersion);
     }
 }

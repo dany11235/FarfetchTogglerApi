@@ -42,9 +42,9 @@ namespace FarfetchDataModel.GenericRepository
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public virtual TEntity GetByID(object id)
+        public virtual TEntity GetByID(params object[] Keyvalues)
         {
-            return DbSet.Find(id);
+            return DbSet.Find(Keyvalues);
         }
 
         /// <summary>
@@ -60,9 +60,9 @@ namespace FarfetchDataModel.GenericRepository
         /// Generic Delete method for the entities
         /// </summary>
         /// <param name="id"></param>
-        public virtual void Delete(object id)
+        public virtual void Delete(params object[] Keyvalues)
         {
-            TEntity entityToDelete = DbSet.Find(id);
+            TEntity entityToDelete = DbSet.Find(Keyvalues);
             Delete(entityToDelete);
         }
 
@@ -160,9 +160,9 @@ namespace FarfetchDataModel.GenericRepository
         /// </summary>
         /// <param name="primaryKey"></param>
         /// <returns></returns>
-        public bool Exists(object primaryKey)
+        public bool Exists(params object[] Keyvalues)
         {
-            return DbSet.Find(primaryKey) != null;
+            return DbSet.Find(Keyvalues) != null;
         }
 
         /// <summary>
@@ -172,7 +172,16 @@ namespace FarfetchDataModel.GenericRepository
         /// <returns>A single record that matches the specified criteria</returns>
         public TEntity GetSingle(Func<TEntity, bool> predicate)
         {
-            return DbSet.Single<TEntity>(predicate);
+
+            try
+            {
+                var result = DbSet.Single<TEntity>(predicate);
+                return result;
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         /// <summary>
@@ -182,7 +191,15 @@ namespace FarfetchDataModel.GenericRepository
         /// <returns>A single record containing the first record matching the specified criteria</returns>
         public TEntity GetFirst(Func<TEntity, bool> predicate)
         {
-            return DbSet.First<TEntity>(predicate);
+            try
+            {
+                var result = DbSet.First<TEntity>(predicate);
+                return result;
+            }
+            catch {
+                return null;
+            }
+            
         }
 
 

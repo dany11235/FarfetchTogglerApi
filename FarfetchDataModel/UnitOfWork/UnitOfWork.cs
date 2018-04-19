@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FarfetchDataModel.UnitOfWork
 {
-    public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IDisposable,IUnitOfWork
     {
         #region Private member variables...
 

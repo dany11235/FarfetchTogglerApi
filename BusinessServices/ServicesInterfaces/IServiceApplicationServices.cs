@@ -9,6 +9,5 @@ namespace FarfetchBusinessServices
         IEnumerable<ServiceEntity> GetAllServices();
         int CreateService(ServiceEntity serviceEntity);
         bool UpdateService(int serviceId, ServiceEntity serviceEntity);
-        bool DeleteService(int serviceId);
     }
 }

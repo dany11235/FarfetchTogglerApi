@@ -9,10 +9,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace FarfetchToggler.Controllers
 {
-    [AuthorizationRequired]
+    
     [RoutePrefix("api/Services")]
     public class ServiceController : ApiController
     {
@@ -31,9 +32,16 @@ namespace FarfetchToggler.Controllers
 
         #endregion
 
+
+        /// <summary>
+        /// Gets a collection of Services
+        /// </summary>
+        /// <returns></returns>
+        // GET api/services
+        [AuthorizationRequired]
         [HttpGet]
         [Route("")]
-        // GET api/services
+        [ResponseType(typeof(IEnumerable<ServiceEntity>))]
         public HttpResponseMessage GetAll()
         {
             var services = _serviceApplicationServices.GetAllServices();
@@ -46,9 +54,15 @@ namespace FarfetchToggler.Controllers
             return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Services not found");
         }
 
+        /// <summary>
+        /// Gets a specific of Service
+        /// </summary>
+        /// <returns></returns>
+        // GET api/services/5
+        [AuthorizationRequired]
         [HttpGet]
         [Route("{serviceId}")]
-        // GET api/services/5
+        [ResponseType(typeof(ServiceEntity))]
         public IHttpActionResult GetById(int serviceId)
         {
             if (serviceId == 0) {
@@ -64,9 +78,15 @@ namespace FarfetchToggler.Controllers
 
         }
 
+        /// <summary>
+        /// Creates a service
+        /// </summary>
+        /// <returns></returns>
+        // POST api/services
+        [AuthorizationRequired]
         [HttpPost]
         [Route("")]
-        // POST api/services
+        [ResponseType(typeof(ServiceEntity))]
         public IHttpActionResult Create([FromBody]ServiceEntity serviceEntity)
         {
             if (serviceEntity == null)
@@ -85,9 +105,15 @@ namespace FarfetchToggler.Controllers
 
         }
 
+        /// <summary>
+        /// Updates a service
+        /// </summary>
+        /// <returns></returns>
+        // PUT api/services/5
+        [AuthorizationRequired]
         [HttpPut]
         [Route("{serviceId}")]
-        // PUT api/services/5
+        [ResponseType(typeof(ServiceEntity))]
         public IHttpActionResult Update(int serviceId, [FromBody]ServiceEntity serviceEntity)
         {
             if (serviceId == 0 || serviceEntity == null)
@@ -105,21 +131,7 @@ namespace FarfetchToggler.Controllers
 
         }
 
-        [HttpDelete]
-        [Route("{serviceId}")]
-        // DELETE api/services/5
-        public IHttpActionResult Delete(int serviceId)
-        {
-            if (serviceId == 0)
-                return BadRequest();
-
-            bool result = _serviceApplicationServices.DeleteService(serviceId);
-
-            if (result)
-                return Ok();
-            else
-                return StatusCode(HttpStatusCode.NoContent);
-        }
+ 
 
     }
 }
