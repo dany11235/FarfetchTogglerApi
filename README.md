@@ -32,7 +32,7 @@ Features used
 <h3>Authentication </h3>
 
 <ul>
-<li>Call the api EndPoint api/Authentication with Basic Authentication (Username:Admin , password:Admin)</li>
+<li>Call the api endpoint 'api/Authentication' with Basic Authentication (Username:Admin , password:Admin)</li>
 <li>A token will be sent to you in the response headers</li>
 <li>Use that token to make requests that require authentication sending it in request headers.(Header parameter: Token)</li>
 </ul>
